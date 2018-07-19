@@ -1,0 +1,60 @@
+@import 'src/scss/variables';
+@import 'src/scss/mixins';
+
+.news {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: $marginM;
+
+    &__header {
+        flex: 1 1 10px;
+        background: linear-gradient($newsHeaderBorder, $newsHeader);
+        border: 1px solid $newsHeaderBorder;
+        color: $white;
+        font-size: $mediumFont;
+        font-weight: 400;
+        padding-top: $paddingS;
+
+        @include borderRadius();
+        // ToDo remove tag ref
+        input[type=checkbox] {
+            display: none;
+        }
+        // yes I know, I target the HTML...
+        input[type=checkbox] + label {
+            padding-left: $paddingM;
+        }
+
+        input[type=checkbox]:checked ~ .news__headlines {
+            max-height: 500px;
+            transition: max-height 0.45s ease;
+        }
+    }
+
+    &__headline-list {
+        list-style-type: none;
+        padding-left: $paddingM;
+    }
+
+    &__headlines {
+        flex: 1 1 10px;
+        background: $white;
+        max-height: 0;
+        transition: max-height 0.15s ease;
+        overflow: hidden;
+        color: black;
+        margin-top: $paddingS;
+        border-bottom-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+    }
+
+    &__headline {
+        padding: $paddingXS 0;
+    }
+
+    &__link {
+        @include links($newsLink, $newsLink, $newsLinkHover, $newsLinkActive);
+    }
+}
+

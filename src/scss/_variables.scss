@@ -1,0 +1,78 @@
+// Naming convention for SCSS variables is $ and camelCase
+// notice how I have switched between using primary and Default... this is a naming convention that needs to be
+// standardised before development
+
+// Corporate Colours
+$msaGreen: rgb(15, 171, 75);
+
+// Names Colours
+$white: rgb(255, 255, 255);
+
+// Layout Colours & defaults
+$background: rgb(51, 51, 51);
+$headerBackground: rgb(85, 187, 85);
+$dashBoardBorder: rgb(15, 171, 75);
+$primaryBackground: rgb(238, 238, 238);
+
+$sideBarBg: rgb(42, 42, 42);
+$sideBarHoverOne: $msaGreen;
+$sideBarHoverTwo: rgb(3, 169, 244);
+$sideBarHoverThree: rgb(0, 188, 212);
+$sideBarHoverFour: rgb(139, 195, 74);
+$sideBarHoverFive: rgb(205, 220, 57);
+$sideBarHoverSix: rgb(255, 235, 59);
+$sideBarHoverSeven: rgb(255, 193, 7);
+$sideBarHoverEight: rgb(255, 87, 34);
+$sideBarHoverNine: rgb(244, 67, 54);
+$sideBarHoverTen: rgb(156, 39, 176);
+$sideBarBorder: rgb(34, 34, 34);
+$sideBarText: rgb(238, 238, 238);
+$sideBarHoverBackground: rgb(68, 68, 68);
+
+$sideBarHoverList: $sideBarHoverOne $sideBarHoverTwo $sideBarHoverThree $sideBarHoverFour
+$sideBarHoverFive $sideBarHoverSix $sideBarHoverSeven $sideBarHoverEight $sideBarHoverNine $sideBarHoverTen;
+
+$primaryLink: rgb(15, 171, 75);
+$primaryHover: rgb(85, 187, 85);
+$primaryActive: rgb(0, 126, 42);
+
+// dashboard
+$dashBoardLink: $primaryLink;
+$dashBoardLinkHover: $primaryHover;
+$dashBoardLinkActive: $primaryActive;
+
+// news
+$newsHeader: rgb(255,193,7);
+$newsHeaderBorder: rgb(255,152,0);
+$newsLink: rgb(255,152,0);
+$newsLinkHover: rgb(255,193,7);
+$newsLinkActive: rgb(255,152,0);
+
+$warning: rgb(204, 0, 0);
+
+// modals
+$modalBorder: rgb(186, 186, 186);
+$modalBgPrimary: rgba(0, 0, 0, .6);
+
+// font sizes
+$smallFont: 12px;
+$mediumFont: 16px;
+$h1Font: 26px;
+
+// borders
+$borderRadius: 5px;
+
+// padding & margin
+$paddingXS: 5px;
+$paddingS: 10px;
+$paddingM: 20px;
+$paddingL: 30px;
+
+$marginS: 10px;
+$marginM: 20px;
+
+// buttons
+$btnPrimary: rgb(66,139,202);
+
+// default text
+$defaultFont: 600 $smallFont/1 'Open Sans', sans-serif;

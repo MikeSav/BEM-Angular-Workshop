@@ -1,0 +1,66 @@
+@import 'src/scss/variables';
+
+.sidebar {
+    position: absolute;
+    width: 220px;
+    color: $white;
+
+    /* Note that in the returned CSS the classes are not nested,
+      if we actually want to nest we use the following
+
+      &#{&} {  }
+
+    By using &#{&} or & #{&} or & &, we can chain the parent class with itself.
+    */
+
+    &__title {
+        font-size: $mediumFont;
+        line-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        color: $sideBarText;
+        border-bottom: 1px solid $sideBarBorder;
+        background: $sideBarBg;
+    }
+
+    &__title {
+        font-size: $mediumFont;
+        line-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        color: $sideBarText;
+        border-bottom: 1px solid $sideBarBorder;
+        background: $sideBarBg;
+    }
+
+    &__nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__nav-item {
+        display: block;
+        padding: $paddingM 0 $paddingM $paddingL;
+        font-size: $smallFont;
+        font-weight: 400;
+        color: $sideBarText;
+        border-bottom: 1px solid $sideBarBorder;
+
+        // we could remove this... but keep it as a default?
+        &:hover {
+            box-shadow: inset 5px 0 0 $sideBarHoverOne, inset 6px 0 0 $sideBarBorder;
+            background: $sideBarHoverBackground;
+        }
+
+        @each $color in $sideBarHoverList {
+            $i: index($sideBarHoverList, $color);
+
+            &:nth-child(#{$i}):hover {
+                box-shadow: inset 5px 0 0 $color, inset 6px 0 0 $sideBarBorder;
+            }
+        }
+    }
+
+}

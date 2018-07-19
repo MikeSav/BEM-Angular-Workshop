@@ -1,0 +1,100 @@
+@mixin borderRadius($radius:$borderRadius) {
+    border-radius: $radius;
+}
+
+@mixin links($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+        text-decoration: underline;
+
+        &:visited {
+            color: $visited;
+        }
+
+        &:hover {
+            color: $hover;
+            text-decoration: none;
+        }
+
+        &:active, &:focus {
+            color: $active;
+        }
+    }
+}
+
+@mixin overlay($modalBg, $modalHeaderColor, $modalHeaderBg1, $modalHeaderBg2, $startPosX, $startPosY) {
+
+    // notice double equals
+    @if $startPosX == "right" {
+        $startPosX: 500%;
+    } @else if $startPosX == "left" {
+        $startPosX: -500%;
+    } @else if $startPosX == "center" {
+        $startPosX: 0;
+    }
+
+    @if $startPosY == "top" {
+        $startPosY: -500%;
+    } @else if $startPosY == "center" {
+        $startPosY: 0;
+    }
+
+    &:before {
+        content: "";
+        display: none;
+        background: $modalBg;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    &:target {
+        &:before {
+            display: block;
+        }
+
+        .modal-dialog {
+            transform: translate(0, 0);
+            top: 20%;
+        }
+    }
+
+    .modal-dialog {
+        background: $white;
+        border: 1px solid $white;
+        border-radius: 5px;
+        margin-left: -200px;
+        position: fixed;
+        left: 50%;
+        top: -100%;
+        z-index: 11;
+        width: 360px;
+        transform: translate($startPosX, $startPosY);
+        transition: transform 0.3s ease-out;
+
+        &__header {
+            border-bottom: 1px solid $modalBorder;
+            padding: $paddingS $paddingM;
+            font-size: 20px;
+            background: linear-gradient($modalHeaderBg1, $modalHeaderBg2);
+            border-top-left-radius: $borderRadius;
+            border-top-right-radius: $borderRadius;
+            color: $modalHeaderColor;
+        }
+
+        &__body {
+            padding: $paddingM;
+            font-size: $mediumFont;
+            font-weight: 400;
+        }
+
+        &__footer {
+            border-top: 1px solid $modalBorder;
+            padding: $paddingS $paddingM;
+            text-align: right;
+        }
+    }
+}

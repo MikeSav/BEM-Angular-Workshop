@@ -1,0 +1,57 @@
+/* In this example we see how to use BEM and Sass with nesting (the code is a little nicer) */
+@import 'src/scss/variables';
+
+
+/* this is just a wrapper */
+.msa-app {
+    display: flex;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1;
+    flex-direction: row;
+    background: $primaryBackground;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    // transform: translate3d(220px, 0, 0);
+    // transition: transform .3s;
+
+    input[type=checkbox] {
+        display: none;
+    }
+
+    &#{&}--closed {
+        transform: translate3d(0, 0, 0);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+
+        &__logo {
+            vertical-align: middle;
+            margin-left: $marginM;
+            border: 1px solid $white;
+        }
+
+        &__cell {
+            line-height: 50px;
+            padding: 0 0 0 $paddingM;
+            font-size: $h1Font;
+            background: linear-gradient($dashBoardBorder, $headerBackground);
+            color: $white;
+            border-bottom: 1px solid $dashBoardBorder;
+
+            &:last-of-type {
+                text-align: right;
+                padding: 0 $paddingM 0 0;
+                flex-grow: 1;
+                font-size: $smallFont;
+            }
+        }
+    }
+}
+
+
+
+

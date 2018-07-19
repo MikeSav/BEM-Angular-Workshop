@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Open World Orders",
+    "count": 25,
+    "href": "#openWorkOrders"
+  },
+  {
+    "title": "Parts Stock",
+    "below_notification": 10,
+    "below_minification": 2,
+    "href": null
+  },
+  {
+    "title": "Overdue Scba",
+    "count": 25,
+    "href": null
+  },
+  {
+    "title": "Fit Test",
+    "sixty_days": 10,
+    "thirty_days": 2,
+    "href": null
+  },
+  {
+    "title": "Cylinder Hydro Test",
+    "sixty_days": 30,
+    "thirty_days": 6,
+    "href": null
+  },
+  {
+    "title": "Purchase Orders",
+    "sixty_days": 30,
+    "thirty_days": 6,
+    "href": null
+  }
+]

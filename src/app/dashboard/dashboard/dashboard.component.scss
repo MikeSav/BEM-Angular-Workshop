@@ -1,0 +1,8 @@
+@import 'src/scss/variables';
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: $marginM;
+}

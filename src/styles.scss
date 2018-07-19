@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import './scss/styles';
+
+/* html overwrite */
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: $background;
+}
+
+body {
+    font: $defaultFont;
+}
+
+/* precaution - You have forgotten the alt! */
+img[alt=""], img:not([alt]) {
+    border: 5px dashed $warning;
+}
