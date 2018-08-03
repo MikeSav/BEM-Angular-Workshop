@@ -10,6 +10,8 @@ import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-ite
 import { AppRoutingModule } from './app-routing.module';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
 import { FooterComponent } from './footer/footer.component';
+import { WorkOrderListComponent } from './work-orders/work-order-list/work-order-list.component';
+import { AddWorkOrderComponent } from './work-orders/add-work-order/add-work-order.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +21,9 @@ import { FooterComponent } from './footer/footer.component';
         DashboardComponent,
         DashboardItemComponent,
         ModalWindowComponent,
-        FooterComponent
+        FooterComponent,
+        WorkOrderListComponent,
+        AddWorkOrderComponent
     ],
     imports: [
         BrowserModule,

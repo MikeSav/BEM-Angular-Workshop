@@ -8,6 +8,12 @@ $msaGreen: rgb(15, 171, 75);
 // Names Colours
 $white: rgb(255, 255, 255);
 
+// font sizes
+$smallFont: 12px;
+$mediumFont: 16px;
+$h1Font: 26px;
+$h2Font: 24px;
+
 // Layout Colours & defaults
 $background: rgb(51, 51, 51);
 $headerBackground: rgb(85, 187, 85);
@@ -41,6 +47,12 @@ $dashBoardLink: $primaryLink;
 $dashBoardLinkHover: $primaryHover;
 $dashBoardLinkActive: $primaryActive;
 
+// datagrid
+$dataGridBgLight: $white;
+$dataGridBgDark: rgb(234, 234, 234);
+$dataGridFont: 300 $smallFont/1 'Open Sans', sans-serif;
+$dataGridHeaderBg: rgb(134, 212, 117);
+$dataGridHoverBg: rgb(255, 233, 164);
 // news
 $newsHeader: rgb(255,193,7);
 $newsHeaderBorder: rgb(255,152,0);
@@ -54,17 +66,13 @@ $warning: rgb(204, 0, 0);
 $modalBorder: rgb(186, 186, 186);
 $modalBgPrimary: rgba(0, 0, 0, .6);
 
-// font sizes
-$smallFont: 12px;
-$mediumFont: 16px;
-$h1Font: 26px;
-
 // borders
 $borderRadius: 5px;
 
 // padding & margin
 $paddingXS: 5px;
 $paddingS: 10px;
+$paddingSM: 15px;
 $paddingM: 20px;
 $paddingL: 30px;
 
