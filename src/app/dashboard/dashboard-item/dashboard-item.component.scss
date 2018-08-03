@@ -23,6 +23,12 @@ $preffix: dashboard;
 
     @include borderRadius();
 
+    .dashboard__item-content {
+        height: 200px;
+        display: flex;
+        align-items: center;
+    }
+
     .dashboard__item-header {
         background: linear-gradient($dashBoardBorder, $headerBackground);
         border-bottom: 1px solid $dashBoardBorder;
@@ -31,34 +37,27 @@ $preffix: dashboard;
         font-weight: 400;
         padding: $paddingS;
     }
+
+    .dashboard__link {
+        @include links($dashBoardLink, $dashBoardLinkHover, $dashBoardLinkActive, $dashBoardLink);
+    }
+
+    .dashboard__figure {
+        font-size: 100px;
+        font-weight: 600;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        color: $sideBarBorder;
+        text-align: center;
+    }
+
+    .dashboard__text {
+        font-size: $mediumFont;
+    }
+
+    .dashboard--warning {
+        color: $warning;
+    }
 }
 
-// so due to & #{&} this is actually nested as .dashboard .dashboard__item-content {
-// you could actually just use & &__item-content
-.dashboard .dashboard__item-content {
-    height: 200px;
-    display: flex;
-    align-items: center;
-}
-
-.dashboard__link {
-    @include links($dashBoardLink, $dashBoardLinkHover, $dashBoardLinkActive, $dashBoardLink);
-}
-
-.dashboard__figure {
-    font-size: 100px;
-    font-weight: 600;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
-    color: $sideBarBorder;
-    text-align: center;
-}
-
-.dashboard__text {
-    font-size: $mediumFont;
-}
-
-.dashboard--warning {
-    color: $warning;
-}

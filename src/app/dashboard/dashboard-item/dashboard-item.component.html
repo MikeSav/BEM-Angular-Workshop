@@ -1,25 +1,30 @@
 <div class="dashboard__item">
   <div class="dashboard__item-header">{{dash.title}}</div>
   <div class="dashboard__item-content">
-    <div class="dashboard__figure">
+    <div class="dashboard__figure" [ngClass]="{'dashboard--warning': showWarningText(dash, 1)}">
       {{dash.sixty_days}}
       {{dash.count}}
       {{dash.below_notification}}
       <div *ngIf="dash.sixty_days" class="dashboard__text">
         60 Days
       </div>
-      <div *ngIf="dash.below_notification" class="dashboard__text" >
+      <div *ngIf="dash.below_notification" class="dashboard__text">
         Below Notification
       </div>
+      <div *ngIf="dash.count && dash.href" class="dashboard__text">
+        <a href="{{dash.href}}" class="dashboard__link">link here</a>
+      </div>
     </div>
-    <div  class="dashboard__figure">
+    <!-- if the item contains a count it is a single figure -->
+    <!-- so we don't need this second col -->
+    <div *ngIf="!dash.count" class="dashboard__figure" [ngClass]="{'dashboard--warning': showWarningText(dash, 2)}">
       {{dash.thirty_days}}
       {{dash.below_minification}}
-      <div *ngIf="dash.thirty_days" class="dashboard__text" >
+      <div *ngIf="dash.thirty_days" class="dashboard__text">
         30 Days
       </div>
 
-      <div *ngIf="dash.below_minification" class="dashboard__text" >
+      <div *ngIf="dash.below_minification" class="dashboard__text">
         Below Minification
       </div>
     </div>

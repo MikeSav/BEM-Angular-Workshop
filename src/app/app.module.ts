@@ -7,6 +7,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { NewsItemComponent } from './news-item/news-item.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-item.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-ite
     ],
     imports: [
         BrowserModule,
-        HttpClientModule
+        HttpClientModule,
+        AppRoutingModule
     ],
     providers: [],
     bootstrap: [AppComponent]

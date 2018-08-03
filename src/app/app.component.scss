@@ -13,8 +13,8 @@
     flex-direction: row;
     background: $primaryBackground;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
-    // transform: translate3d(220px, 0, 0);
-    // transition: transform .3s;
+    transform: translate3d(220px, 0, 0);
+    transition: transform .3s;
 
     input[type=checkbox] {
         display: none;

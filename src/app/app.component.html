@@ -1,10 +1,10 @@
 <div class="msa-app">
     <msa-side-nav></msa-side-nav>
-    <div class="content content--closed">
+    <div class="content" [ngClass]="{'content--closed': closeContent}">
         <div class="content__header">
             <div class="content__header__cell">
                 <input type="checkbox" id="sideToggle">
-                <label for="sideToggle">&#9776;</label>
+                <label for="sideToggle" (click)="toggleMenu()">&#9776;</label>
             </div>
             <div class="content__header__cell">AIMS</div>
             <div class="content__header__cell">
@@ -13,6 +13,6 @@
             </div>
         </div>
         <msa-news-item></msa-news-item>
-        <msa-dashboard></msa-dashboard>
+        <router-outlet></router-outlet>
     </div>
 </div>
