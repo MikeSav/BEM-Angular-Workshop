@@ -8,6 +8,8 @@ import { NewsItemComponent } from './news-item/news-item.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-item.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ModalWindowComponent } from './modal-window/modal-window.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
         SideNavComponent,
         NewsItemComponent,
         DashboardComponent,
-        DashboardItemComponent
+        DashboardItemComponent,
+        ModalWindowComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,

@@ -14,5 +14,20 @@
         </div>
         <msa-news-item></msa-news-item>
         <router-outlet></router-outlet>
+        <msa-footer></msa-footer>
     </div>
 </div>
+
+<msa-modal-window [modalType]="'news'"
+                  [modalHeader]="'Aims is great! User feedback through the roof!'"
+                  [modalMessage]="'Of course, MSA is great!'">
+</msa-modal-window>
+
+<msa-modal-window [modalType]="'dashboard'"
+                  [modalHeader]="'Open Work Orders'"
+                  [modalMessage]="'Yeah, we have some open work orders - so what?'">
+</msa-modal-window>
+
+<msa-modal-window [modalHeader]="'Disclaimer'"
+                  [modalMessage]="'Check it out, I am a modal!'">
+</msa-modal-window>

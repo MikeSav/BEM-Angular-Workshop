@@ -21,6 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              { "glob": "**/*", "input": "./images", "output": "/assets/" },
               { "glob": "dashboard-data.json", "input": "./data", "output": "./assets/" }
             ],
             "styles": [

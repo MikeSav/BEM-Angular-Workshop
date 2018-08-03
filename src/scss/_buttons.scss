@@ -1,0 +1,26 @@
+.btn {
+    background: $btnPrimary;
+    border: 1px solid darken($btnPrimary, 5%);
+    border-radius: 3px;
+    color: $white;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+
+    &--close {
+        color: lighten($modalBgPrimary, 50%);
+        font-size: 30px;
+        text-decoration: none;
+        position: absolute;
+        right: 5px;
+        top: 0;
+
+        &:hover {
+            color: $modalBgPrimary;
+        }
+    }
+}
