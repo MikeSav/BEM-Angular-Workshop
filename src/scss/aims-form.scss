@@ -28,8 +28,9 @@
     &__form {
         height: 100vh;
         overflow: scroll;
-        border: 1px solid black;
         flex: 1;
         margin-right: $marginM;
+        margin-top: $marginM;
+        padding-top: $paddingM;
     }
 }
