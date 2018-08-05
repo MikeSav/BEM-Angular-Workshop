@@ -32,15 +32,11 @@ export class AddWorkOrderComponent implements OnInit {
     }
 
     scrollToAnchor(where, event) {
-
         event.stopPropagation();
         event.preventDefault();
-        console.log(where);
         const element = this.aimsForm.nativeElement.querySelector('a[name="' + where + '"]');
         const to = element.offsetTop - 70;
         const from = this.aimsForm.nativeElement.scrollTop;
-        let timeOut = 0;
-
 
         // remove all active classes
         this.workOrder.nativeElement.querySelectorAll('.aims-form__anchor').forEach((item) => {
@@ -59,6 +55,8 @@ export class AddWorkOrderComponent implements OnInit {
         } else {
             this.aimsForm.nativeElement.scrollTop = to;
             /* FIX THIS...
+            const timeOut = 0;
+
             for (let i = from; i >= to; i -= 5) {
 
                 timeOut = (timeOut + (to + 5)) / 2;
