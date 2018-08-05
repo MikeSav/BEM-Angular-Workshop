@@ -28,10 +28,7 @@ export class MsaInputDirective {
         // Element.matches() polyfill
         if (!Element.prototype.matches) {
             Element.prototype.matches =
-                Element.prototype.matchesSelector ||
-                Element.prototype.mozMatchesSelector ||
                 Element.prototype.msMatchesSelector ||
-                Element.prototype.oMatchesSelector ||
                 Element.prototype.webkitMatchesSelector ||
                 function (s) {
                     const matches = (this.document || this.ownerDocument).querySelectorAll(s),
