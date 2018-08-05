@@ -1,0 +1,35 @@
+.aims-form {
+    display: flex;
+    flex-direction: row;
+
+    &__navigation {
+        padding: $paddingM;
+    }
+
+    &__anchor {
+        background-color: $msaGreen;
+        color: $white;
+        text-decoration: none;
+        width:300px;
+        font: $dataGridFont;
+        display: block;
+        padding: $paddingSM;
+        margin-bottom: 1px;
+
+        &--selected {
+            background-color: $formAnchorSelectedBg;
+        }
+
+        &:hover {
+            background-color: $formAnchorHoverBg;
+        }
+    }
+
+    &__form {
+        height: 100vh;
+        overflow: scroll;
+        border: 1px solid black;
+        flex: 1;
+        margin-right: $marginM;
+    }
+}

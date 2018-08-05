@@ -23,7 +23,7 @@ import { AddWorkOrderComponent } from './work-orders/add-work-order/add-work-ord
         ModalWindowComponent,
         FooterComponent,
         WorkOrderListComponent,
-        AddWorkOrderComponent
+        AddWorkOrderComponent,
     ],
     imports: [
         BrowserModule,

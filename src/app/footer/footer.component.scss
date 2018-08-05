@@ -1,0 +1,15 @@
+@import 'src/scss/variables';
+@import 'src/scss/mixins';
+
+.footer {
+    padding: $paddingM;
+    font-size: $smallFont;
+    font-weight: 400;
+    // should really use flex but hey?
+    position: absolute;
+    bottom: 0;
+
+    &__link {
+        @include links($primaryLink, $primaryLink, $primaryHover, $primaryActive);
+    }
+}

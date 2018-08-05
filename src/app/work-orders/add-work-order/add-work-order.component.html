@@ -1,0 +1,37 @@
+<div class="aims-form" #workOrder>
+  <div class="aims-form__navigation">
+    <ul>
+      <li>
+        <a href="#section1" (click)="scrollToAnchor('section1', $event)" class="aims-form__anchor">Section 1</a>
+      </li>
+      <li>
+        <a href="#section2" (click)="scrollToAnchor('section2', $event)" class="aims-form__anchor">Section 2</a>
+      </li>
+      <li>
+        <a href="#section3" (click)="scrollToAnchor('section3', $event)" class="aims-form__anchor">Section 3</a>
+      </li>
+      <li>
+        <a href="#section4" (click)="scrollToAnchor('section4', $event)" class="aims-form__anchor">Section 4</a>
+      </li>
+    </ul>
+  </div>
+  <div class="aims-form__form" #aimsForm (scroll)="setActiveLink()">
+
+    <section>
+      Section 1<a name="section1"></a>
+
+    </section>
+
+    <section>
+      Section 2<a name="section2"></a>
+    </section>
+
+    <section>
+      Section 3<a name="section3"></a>
+    </section>
+
+    <section>
+      Section 4<a name="section4"></a>
+    </section>
+  </div>
+</div>

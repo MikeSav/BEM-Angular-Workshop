@@ -1,0 +1,15 @@
+@import 'src/scss/variables';
+@import 'src/scss/mixins';
+
+// notice that I pass a value for color, not a variable
+.modal--default {
+    @include overlay($modalBgPrimary, #222222, $white, $white, center, top);
+}
+
+.modal--dashboard {
+    @include overlay($modalBgPrimary, $white, $dashBoardBorder, $headerBackground, right, center);
+}
+
+.modal--news {
+    @include overlay($modalBgPrimary, $white, $newsHeaderBorder, $newsHeader, left, center);
+}

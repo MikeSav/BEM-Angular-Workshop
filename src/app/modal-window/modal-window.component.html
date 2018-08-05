@@ -1,0 +1,11 @@
+<div [ngClass]="setModalStyle()" id="{{setModalId()}}" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-dialog__header">{{modalHeader}}
+      <a href="#" class="btn--close" aria-hidden="true">×</a>
+    </div>
+    <div class="modal-dialog__body">{{modalMessage}}</div>
+    <div class="modal-dialog__footer">
+      <a href="#" class="btn">Yep, I get it!</a>
+    </div>
+  </div>
+</div>
