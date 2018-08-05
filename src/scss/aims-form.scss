@@ -10,7 +10,7 @@
         background-color: $msaGreen;
         color: $white;
         text-decoration: none;
-        width:300px;
+        width: 300px;
         font: $dataGridFont;
         display: block;
         padding: $paddingSM;
@@ -31,6 +31,45 @@
         flex: 1;
         margin-right: $marginM;
         margin-top: $marginM;
-        padding-top: $paddingM;
+        padding: $paddingM;
+        background-color: $white;
+        font: $formFont;
+    }
+
+    &__group {
+        position: relative;
+
+        & + & {
+            margin-top: 30px;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        color: $formInputLabel;
+        background-color: $white;
+        z-index: 10;
+        transition: transform 150ms ease-out, font-size 150ms ease-out;
+    }
+    // ToDo - Position better
+    &__group--focused &__label {
+        transform: translateY(-125%);
+        font-size: .75em;
+    }
+
+    &__input {
+        position: relative;
+        padding: 12px 0px 5px 0;
+        width: 100%;
+        outline: 0;
+        border: 0;
+        box-shadow: 0 1px 0 0 #e5e5e5;
+        transition: box-shadow 150ms ease-out;
+
+        &:focus {
+            box-shadow: 0 2px 0 0 rgb(102, 218, 72);
+        }
     }
 }

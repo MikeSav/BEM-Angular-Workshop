@@ -12,6 +12,7 @@ import { ModalWindowComponent } from './modal-window/modal-window.component';
 import { FooterComponent } from './footer/footer.component';
 import { WorkOrderListComponent } from './work-orders/work-order-list/work-order-list.component';
 import { AddWorkOrderComponent } from './work-orders/add-work-order/add-work-order.component';
+import { MsaInputDirective } from './shared/directives/msa-input.directive';
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { AddWorkOrderComponent } from './work-orders/add-work-order/add-work-ord
         FooterComponent,
         WorkOrderListComponent,
         AddWorkOrderComponent,
+        MsaInputDirective,
     ],
     imports: [
         BrowserModule,
