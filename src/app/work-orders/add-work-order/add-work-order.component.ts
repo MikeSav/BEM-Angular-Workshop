@@ -17,8 +17,7 @@ export class AddWorkOrderComponent implements OnInit {
 
     setActiveLink() {
         this.aimsForm.nativeElement.querySelectorAll('section').forEach((item) => {
-
-            if (this.workOrder.nativeElement.querySelector('.aims-form__form').scrollTop >= item.offsetTop) {
+            if (this.workOrder.nativeElement.querySelector('.aims-form__form').scrollTop >= (item.offsetTop - 90)) {
 
                 // remove all the selected classes
                 this.workOrder.nativeElement.querySelectorAll('.aims-form__anchor').forEach((anchor) => {
@@ -38,7 +37,7 @@ export class AddWorkOrderComponent implements OnInit {
         event.preventDefault();
         console.log(where);
         const element = this.aimsForm.nativeElement.querySelector('a[name="' + where + '"]');
-        const to = element.offsetTop - 81;
+        const to = element.offsetTop - 70;
         const from = this.aimsForm.nativeElement.scrollTop;
         let timeOut = 0;
 
