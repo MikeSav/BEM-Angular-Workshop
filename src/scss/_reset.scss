@@ -5,6 +5,15 @@ ol, ul {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 section {
-    padding-bottom: 500px;
+  padding-bottom: 30px;
 }
