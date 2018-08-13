@@ -20,7 +20,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.closeContent = true;
+        if (!this.closeContent) {
+          this.closeContent = true;
+        }
       }
     });
   }

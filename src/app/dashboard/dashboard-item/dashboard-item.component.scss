@@ -13,7 +13,7 @@ By using &#{&} or & #{&} or & &, we can chain the parent class with itself.
 
 $preffix: dashboard;
 
-.dashboard__item {
+.#{$preffix}__item {
     min-width: 300px;
     border: 1px solid $dashBoardBorder;
     flex: 1 1 10px;
@@ -23,13 +23,13 @@ $preffix: dashboard;
 
     @include borderRadius();
 
-    .dashboard__item-content {
+    &-content {
         height: 200px;
         display: flex;
         align-items: center;
     }
 
-    .dashboard__item-header {
+    &-header {
         background: linear-gradient($dashBoardBorder, $headerBackground);
         border-bottom: 1px solid $dashBoardBorder;
         color: $white;
@@ -38,11 +38,11 @@ $preffix: dashboard;
         padding: $paddingS;
     }
 
-    .dashboard__link {
+    .#{$preffix}__link {
         @include links($dashBoardLink, $dashBoardLinkHover, $dashBoardLinkActive, $dashBoardLink);
     }
 
-    .dashboard__figure {
+    .#{$preffix}__figure {
         font-size: 100px;
         font-weight: 200;
         flex-grow: 1;
@@ -52,11 +52,11 @@ $preffix: dashboard;
         text-align: center;
     }
 
-    .dashboard__text {
+    .#{$preffix}__text {
         font-size: $mediumFont;
     }
 
-    .dashboard--warning {
+    .#{$preffix}--warning {
         color: $warning;
     }
 }
