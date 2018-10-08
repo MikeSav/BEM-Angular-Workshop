@@ -1,34 +1,39 @@
 .btn {
-    background: $btnPrimary;
-    border: 1px solid darken($btnPrimary, 5%);
-    border-radius: 3px;
-    color: $white;
-    display: inline-block;
-    font-size: 14px;
-    padding: 8px 15px;
-    text-decoration: none;
+  background: $btnPrimary;
+  border: 1px solid darken($btnPrimary, 5%);
+  border-radius: 3px;
+  color: $white;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 60px;
+  position: relative;
+
+  &--add {
+    background: #86d475;
+    border-radius: 50%;
+    color: white;
+    width: 32px;
     text-align: center;
-    min-width: 60px;
-    position: relative;
 
-    &--add {
-        background: #86d475;
-        border-radius: 50%;
-        color: white;
-        width: 32px;
-        text-align: center;
+    .btn__link {
+      text-decoration: none;
+      color: $white;
     }
+  }
 
-    &--close {
-        color: lighten($modalBgPrimary, 50%);
-        font-size: 30px;
-        text-decoration: none;
-        position: absolute;
-        right: 5px;
-        top: 0;
+  &--close {
+    color: lighten($modalBgPrimary, 50%);
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
 
-        &:hover {
-            color: $modalBgPrimary;
-        }
+    &:hover {
+      color: $modalBgPrimary;
     }
+  }
 }

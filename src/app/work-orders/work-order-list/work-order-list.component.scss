@@ -1,25 +1,19 @@
 @import 'src/scss/variables';
 
 .work-order {
-    &-header {
+    &__header {
         display: flex;
         margin: $marginM;
         padding-left: $paddingSM;
     }
 
-    &-title {
+    &__title {
         font-size: $h2Font;
     }
 
-    &-add{
+    &__add {
         margin-left: auto;
         font-size: $h2Font;
         padding-right: $paddingSM;
-
-        // overwrite browser css
-        a {
-            text-decoration: none;
-            color: $white;
-        }
     }
 }
