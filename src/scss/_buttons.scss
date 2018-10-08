@@ -10,18 +10,20 @@
   text-align: center;
   min-width: 60px;
   position: relative;
+  text-decoration: none;
+  color: $white;
+
+  .btn__link {
+    text-decoration: none;
+    color: $white;
+  }
 
   &--add {
     background: #86d475;
     border-radius: 50%;
-    color: white;
-    width: 32px;
+    border: unset;
+    min-width: unset;
     text-align: center;
-
-    .btn__link {
-      text-decoration: none;
-      color: $white;
-    }
   }
 
   &--close {
